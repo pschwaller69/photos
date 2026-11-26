@@ -1,0 +1,11 @@
+# Protège les fichiers internes
+<FilesMatch "^(config|config\.sample|lib)\.php$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
+AddDefaultCharset UTF-8
+
+# Laisse passer l'en-tête du script de synchronisation
+<IfModule mod_setenvif.c>
+    SetEnvIf X-Api-Token "(.*)" HTTP_X_API_TOKEN=$1
+</IfModule>
