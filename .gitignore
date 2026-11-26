@@ -1,0 +1,11 @@
+# Configuration personnelle (mots de passe, clés)
+site/config.php
+indexeur/config.ini
+# Données locales du script
+indexeur/etat.sqlite
+indexeur/*.log
+indexeur/exiftool*
+__pycache__/
+# Images envoyées par le script (sur le serveur seulement)
+site/media/*
+!site/media/.htaccess
